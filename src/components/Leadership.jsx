@@ -26,7 +26,7 @@ const Leadership = () => {
           }}
         >
           <img
-            src="/images/leader.png"
+            src="/images/leader.jpeg"
             alt="Adixi Engineering Leadership"
             style={{
               width: '100%',
@@ -53,6 +53,8 @@ const Leadership = () => {
                 Leadership
               </h3>
               <p style={{ fontSize: 18 }}>Pramod Kumar Giri</p>
+
+
               <p style={{ fontSize: 14, opacity: 0.85, marginTop: 8 }}>
                 Directors
               </p>
