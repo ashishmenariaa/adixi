@@ -1,0 +1,47 @@
+package com.adixi.careers.controller;
+
+import jakarta.mail.internet.MimeMessage;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.mail.javamail.JavaMailSender;
+import org.springframework.mail.javamail.MimeMessageHelper;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
+
+@RestController
+@CrossOrigin(origins = "*")
+public class ApplicationController {
+
+    @Autowired
+    private JavaMailSender mailSender;
+
+    @PostMapping("/apply")
+    public ResponseEntity<String> apply(
+            @RequestParam String name,
+            @RequestParam String email,
+            @RequestParam String phone,
+            @RequestParam String position,
+            @RequestParam String experience,
+            @RequestParam MultipartFile resume
+    ) throws Exception {
+
+        MimeMessage message = mailSender.createMimeMessage();
+        MimeMessageHelper helper = new MimeMessageHelper(message, true);
+
+        helper.setTo("yourcompany@gmail.com");
+        helper.setSubject("New Job Application - " + position);
+
+        helper.setText(
+                "Name: " + name + "\n" +
+                "Email: " + email + "\n" +
+                "Phone: " + phone + "\n" +
+                "Experience: " + experience
+        );
+
+        helper.addAttachment(resume.getOriginalFilename(), resume);
+
+        mailSender.send(message);
+
+        return ResponseEntity.ok("Application submitted successfully");
+    }
+}
