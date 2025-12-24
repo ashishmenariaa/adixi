@@ -26,7 +26,7 @@ const Leadership = () => {
           }}
         >
           <img
-            src="/images/leader.jpeg"
+            src="/images/leader.png"
             alt="Adixi Engineering Leadership"
             style={{
               width: '100%',
