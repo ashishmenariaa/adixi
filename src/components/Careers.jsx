@@ -17,10 +17,37 @@ const Careers = () => {
     setForm({ ...form, [name]: files ? files[0] : value });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    alert('Form connected to backend ✔');
-  };
+const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  if (!form.resume) {
+    alert("Please upload resume");
+    return;
+  }
+
+  const formData = new FormData();
+  formData.append("name", form.name);
+  formData.append("email", form.email);
+  formData.append("phone", form.phone);
+  formData.append("position", form.position);
+  formData.append("experience", form.experience);
+  formData.append("resume", form.resume);
+
+  try {
+    const response = await fetch("http://localhost:8080/apply", {
+      method: "POST",
+      body: formData
+    });
+
+    const result = await response.text();
+    alert(result); // Spring Boot ka response
+
+  } catch (error) {
+    console.error(error);
+    alert("Failed to submit application");
+  }
+};
+
 
   return (
     <section style={{ background: '#f8fafc', padding: '120px 40px' }}>
