@@ -126,7 +126,7 @@ const Footer = () => {
                     textDecoration: 'none'
                   }}
                 >
-                  +91 98969 02045
+                  +91 94559 50672
                 </a>
               </div>
 
