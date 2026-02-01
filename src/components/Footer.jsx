@@ -105,21 +105,21 @@ const Footer = () => {
               <div style={{ display: 'flex', gap: 12 }}>
                 <Mail size={18} color="#2563eb" />
                 <a
-                  href="mailto:info.adixi@gmail.com"
+                  href="mailto:info@adixi.co.in"
                   style={{
                     color: '#94a3b8',
                     fontSize: 14,
                     textDecoration: 'none'
                   }}
                 >
-                  info.adixi@gmail.com
+                  info@adixi.co.in
                 </a>
               </div>
 
               <div style={{ display: 'flex', gap: 12 }}>
                 <Phone size={18} color="#2563eb" />
                 <a
-                  href="tel:+919896902045"
+                  href="tel:+91 94559 50672"
                   style={{
                     color: '#94a3b8',
                     fontSize: 14,

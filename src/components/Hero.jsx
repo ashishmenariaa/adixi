@@ -50,7 +50,7 @@ const Hero = () => {
             }}
           >
             <Award size={16} />
-            ISO Certified • GST: 09ABACA6120H1ZZ
+            ISO:9001:2015 • GST: 09ABACA6120H1ZZ
           </motion.div>
 
           {/* HEADLINE */}
@@ -230,7 +230,7 @@ const Hero = () => {
                 lineHeight: 1
               }}
             >
-              Since 2022
+              Since 2024
             </div>
             <div
               style={{

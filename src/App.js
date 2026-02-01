@@ -5,7 +5,6 @@ import Hero from './components/Hero';
 import Stats from './components/Stats';
 import About from './components/About';
 import CoreValues from './components/CoreValues';
-import Leadership from './components/Leadership';
 import Services from './components/Services';
 import Testimonials from './components/Testimonials';
 import Benefits from './components/Benefits';
@@ -22,7 +21,6 @@ function App() {
       <Stats />
       <About />
       <CoreValues />
-      <Leadership />
       <Services />
       <Testimonials />
       <Benefits />
