@@ -66,8 +66,8 @@ const Contact = () => {
         }}>
           {[
             { icon: <Mail />, title: 'Email Us', value: 'info@adixi.co.in' },
-            { icon: <Phone />, title: 'Call Us', value: '+91 94559 50672' },
-            { icon: <MapPin />, title: 'Visit Us', value: 'Shakti-U.P, India' }
+            { icon: <Phone />, title: 'Call Us', value: '+91 93358 24291' },
+            { icon: <MapPin />, title: 'Visit Us', value: 'Kota Basti, Shakti Nagar, Sonbhadra, UP – 231222' }
           ].map((item, i) => (
             <div key={i} style={{
               background: '#f9fafb',

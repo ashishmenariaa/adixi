@@ -79,7 +79,7 @@ const Navbar = () => {
 
         {/* NAV LINKS */}
         <div style={{ display: 'flex', alignItems: 'center', gap: 40 }}>
-          {['Home', 'Services', 'About', 'Careers', 'Contact'].map(item => (
+          {['Home', 'Services', 'About', 'Projects', 'Careers', 'Contact'].map(item => (
             <a
               key={item}
               href={`#${item.toLowerCase()}`}
